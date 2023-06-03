@@ -5,6 +5,9 @@ resources:
   - ../../components/app
 namespace: "radarr"
 namePrefix: "radarr-"
+images:
+  - name: "linuxserver/radarr"
+    newTag: "amd64-4.4.4"
 configMapGenerator:
   - name: app-config
     envs:
