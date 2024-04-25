@@ -24,13 +24,19 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /config
-            - name: videos
-              mountPath: /videos
+            - name: downloads
+              mountPath: /videos/import
+            - name: movies
+              mountPath: /videos/Movies
       volumes:
         - name: data
           persistentVolumeClaim:
             claimName: data-pvc
-        - name: videos
+        - name: downloads
           hostPath:
-            path: /mnt/media
+            path: /mnt/downloads/import
+            type: Directory
+        - name: movies
+          hostPath:
+            path: /mnt/media/Movies
             type: Directory
