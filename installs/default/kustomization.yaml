@@ -7,7 +7,7 @@ namespace: "radarr"
 namePrefix: "radarr-"
 images:
   - name: "linuxserver/radarr"
-    newTag: "amd64-4.4.4"
+    newTag: "amd64-5.4.6"
 configMapGenerator:
   - name: app-config
     envs:
